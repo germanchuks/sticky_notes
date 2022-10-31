@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none!important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position:relative;
+    /* flex-direction: column;
+    align-items: center; */
+    background-size: cover;
+    font-family: 'Flow Circular', cursive;
+    background: url("../images/sticky_background2.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #ffffcc;
+    height:100%;
+    overflow-x: hidden;
+}
+
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1em 1em 1em 0.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.2em;
+    color:#fff;
+    background-color: rgba(5, 0, 36, 0.749);
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height:80px;
+    clear:both;
+    z-index: 1;
+}
+
+.sidebarIcon {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    margin-right:30px;
+    color: rgba(255, 240, 240, 0.765);
+
+}
+
+.sibebarIcon:hover, .sidebarIcon:active {
+    color:#fff;
+}
+
+
+#addNote {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    right:10px;
+    font-size: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.8px 1px hsl(23deg 93% 31% / 0.36);
+    opacity: 0.5;
+    color:#fff
+}
+
+#addNote:hover{
+    cursor: pointer;
+    background-color: none;
+    opacity: 0.5;
+}
+
+.wrapper {
+    /* flex-direction: row; */
+	display: flex;
+    flex-direction: row;
+    font-size:1em;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 15px;
+    height:100%;
+    width:100%;
+    transition: margin-right .5s;
+    /* padding: 20px; */
+    z-index: 1;
+    top:20%;
+}
+
+#container {
+    display:inline-block;
+    left:0;
+    width:35%;
+    height:100%;
+    margin-top:100px;
+    font-size:1em;
+ 
+}
+
+.note {
+    width:85%;
+    margin: 70px;
+    margin-bottom:110px;
+    border-radius: 10px;
+    padding:15px;
+    opacity:0.7;
+    height:320px;
+    font-size:1em;
+    background-color: rgba(242, 194, 178, 0.807);
+    resize: none;
+    box-shadow: rgba(3, 3, 3, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0, 0, 0, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+textarea:focus {
+    opacity:1;
+    border: none;
+}
+
+
+.displayBox{
+    width:50%;
+    height: 75%;
+    display:flex;
+    flex-direction: row;
+    position:fixed;
+    z-index:1;
+    top:90;
+    border-radius: 0;
+    right:0;
+    background-color: rgba(5, 0, 36, 0.749);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    overflow-y: visible;
+}
+
+.displayBox>.mainItem {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);   
+    word-break: break-all;
+    width:40%;
+    height:390px;
+
+}
+
+.note {
+}
+
+.defaultEditor, .editorMenu {
+    width:100%;
+    height:200px;
+}
+
+#sideMenu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    font-family: 'arvo';;
+    color:#fff;
+    text-decoration: none !important;
+    background-color: rgba(5, 0, 36, 0.749); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; 
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+}
+
+.reminder {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:10%;
+    background-color:#fefdfd8f;
+    color:#000;
+    font-family:'serif';
+    font-weight:900;
+    font-size: 120%;
+    margin-bottom: 20px;
+}
+
+/* The navigation menu links */
+.sideMenuList {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: flex;
+    flex-direction: column;
+    gap:200px;
+    align-items: center;
+    transition: 0.3s;
+  }
+
+.sideMenuClose {
+    font-size: 50px;
+    color: #818181;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: right;
+    transition: 0.3s;
+    padding: 0 30px 25px 0;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sideMenu a:hover {
+  color: #f1f1f1;
+}
+
+
+
+.currentRdr {
+    display:flex;
+    flex-direction: column;
+}
+
+.footer {
+    display:flex;
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the top of the page */
+    align-items: center;
+    margin-top: auto;
+    width:100%;
+    height:5%;
+    padding:1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    color:#fff;
+    background-color: rgba(5, 0, 36, 0.749);
+    z-index: 1;
+}

@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <script src="https://kit.fontawesome.com/4b73b9edc9.js" crossorigin="anonymous"></script>
+    <link href="css/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/testStyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/quillStyle.css">
+    <script src="script/script.js"></script>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+</head>
+<body onload="editorFocus()">
+    <div class="header">
+        <a href="javascript:void(0);" class="sidebarIcon" onclick="openSideMenu()"><i class="fa-solid fa-bars"></i></a>
+        <p>STICKY NOTES</p>
+        <a href="javascript:void(0);" id="addNote" onclick="addNewNote()"><i class="fa-solid fa-circle-plus fa-1x"> Add Note</i></a>
+    </div>
+
+    <div class="wrapper">
+        <div id="container">
+            <textarea class="note" id="text1" onclick="editorFocus()"></textarea>
+        </div>
+
+        <div class="displayBox">
+            <div class="mainItem" id="defaultContainer">
+                <div class="defaultEditor" id="editor" style="height:300px"></div>
+                <div class="editorMenu">
+                    <button onclick="saveNote()"><i class="fa-solid fa-floppy-disk"></i>Save</button>
+                    <button>Close</button>
+                    <button><i class="fa-solid fa-share-from-square"></i>Share</button>
+                    <button><i class="fa-solid fa-trash"></i>Delete</button>
+                </div>
+            </div>
+        </div> 
+
+        <div id="sideMenu" class="mySideMenu">
+          <a href="javascript:void(0)" class="sideMenuClose" onclick="closeMenu()">&times;</a>
+          <div class="reminder dropdown">
+              <p onclick = "myReminder()" class="dropbtn">Reminders</p>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>   
+          </div>
+          <div class="sideMenuList">
+            <a href="#">Today</a>
+            <a href="#">Incoming</a> 
+          </div>
+                  
+        </div>
+    </div>
+
+    <div class="footer">
+      <span><i class="fa-regular fa-copyright"></i> GerMan</span>
+    </div>
+    
+    
+    
+    <script src="script/quillScript.js"></script>
+</body>
+</html>
